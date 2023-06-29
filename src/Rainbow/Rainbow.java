@@ -57,14 +57,17 @@ int color;
 
         if (subs.compareTo("ый")==0)
         {
-            text.replace("ый", "о-");
+            //text.replace("ый", "о-");
+            text=text.substring(0, text.length()-2)+"о-";
         } else
         if (subs.compareTo("ий")==0)
         {
-            text.replace("ий", "е-");
+            //text.replace("ий", "е-");
+            text=text.substring(0, text.length()-2)+"е-";
         } else
         {
-            text.replace("ой", "о-");
+            //text.replace("ой", "о-");
+            text=text.substring(0, text.length()-2)+"о-";
         }
 
         return text+getColor(color2);

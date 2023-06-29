@@ -18,7 +18,9 @@ public class Main {
         System.out.println("Основной тон:");
         System.out.println(rainbow.getColor(color));
         System.out.println("Основной с оттенком:");
+
         System.out.println(rainbow.getColor(ton,color));
+
         /*
         * Создать два класса (в разных пакетах), первый - только для запуска второй класс - Радуга.
         * Класс Радуга должен уметь выводить названия цветов по введенным номерам цветов.
