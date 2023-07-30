@@ -3,8 +3,6 @@ package Lesson5;
 import static Lesson5.GenerateFunctions.Generate_Double_element;
 import static Lesson5.GenerateFunctions.Generate_String_element;
 
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
 
 public class Matrix {
     public static void main(String[] args) {
