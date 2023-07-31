@@ -12,17 +12,22 @@ public class Main {
 
         ArrayList<Student> students = new ArrayList<>();
         students.add(new Student("Ivan", "PO-15", 3, 1));
-        students.add(new Student("Mark", "PO-16", 2, 2));
         students.add(new Student("Vasia", "PO-11", 3, 3));
         students.add(new Student("Kolia", "PO-10", 2, 4));
+        students.add(new Student("Mark", "PO-16", 2, 2));
         students.add(new Student("Petia", "PO-15", 1, 5));
         printList(students);
 
         for (int i = 0; i < students.size(); i++) {
             if (students.get(i).getMark() < 3) {
                 students.remove(i);
-            } else students.get(i).course++;
-            // students.get(i).setCourse(students.get(i).getCourse()++);
+            } else  {
+                //students.get(i).course++;
+                Student student = students.get(i);
+                Integer course = student.getCourse();
+                student.setCourse(++course);
+
+            }
         }
 
         System.out.println("Result after remove");

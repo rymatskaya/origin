@@ -3,7 +3,7 @@ package Lesson9_Collection;
 public class Student {
     private String name;
     private String group;
-    protected Integer course;
+    private Integer course;
     private Integer mark;
 
     public Student(String name, String group, Integer course, Integer mark) {
@@ -22,6 +22,9 @@ public class Student {
         return course;
     }
 
+    public void setCourse(Integer course) {
+        this.course = course;
+    }
 
     @Override
     public String toString() {
