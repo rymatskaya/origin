@@ -1,6 +1,5 @@
-package Files;
+package files;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Menu {
@@ -27,7 +26,7 @@ public class Menu {
                 menuGoods.menuGoods();
                 break;
             } else if (step.equals("2")) {
-                System.out.println("Orders");
+                System.out.println("orders");
                 menuOrders.menuOrders();
             } else if (step.equals("0")) {
                 return;

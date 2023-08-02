@@ -1,8 +1,7 @@
-package Orders;
+package orders;
 
 import java.util.List;
 import java.util.UUID;
-import java.util.function.Consumer;
 
 public class Order {
     private UUID idGood;   //	 идентификатор

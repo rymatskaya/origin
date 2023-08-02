@@ -1,4 +1,4 @@
-package Orders;
+package orders;
 
 import java.io.*;
 import java.nio.file.Path;
@@ -28,7 +28,7 @@ public class Menu {
                 menuGoods();
                 break;
             } else if (step.equals("2")) {
-                System.out.println("Orders");
+                System.out.println("orders");
                 menuOrders();
             } else if (step.equals("0")) {
                 return;

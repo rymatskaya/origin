@@ -1,4 +1,4 @@
-package Pelmeni;
+package pelmeni;
 
 import java.util.Random;
 

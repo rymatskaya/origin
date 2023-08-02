@@ -1,4 +1,4 @@
-package Cat;
+package cat;
 
 import java.util.Random;
 import java.util.Scanner;

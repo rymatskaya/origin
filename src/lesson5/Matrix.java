@@ -1,7 +1,7 @@
-package Lesson5;
+package lesson5;
 
-import static Lesson5.GenerateFunctions.Generate_Double_element;
-import static Lesson5.GenerateFunctions.Generate_String_element;
+import static lesson5.GenerateFunctions.Generate_Double_element;
+import static lesson5.GenerateFunctions.Generate_String_element;
 
 
 public class Matrix {

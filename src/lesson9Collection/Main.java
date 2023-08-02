@@ -1,4 +1,4 @@
-package Lesson9_Collection;
+package lesson9Collection;
 
 import java.util.*;
 import java.util.function.Consumer;

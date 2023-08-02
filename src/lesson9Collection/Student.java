@@ -1,4 +1,4 @@
-package Lesson9_Collection;
+package lesson9Collection;
 
 public class Student {
     private String name;

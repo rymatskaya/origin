@@ -1,4 +1,4 @@
-package Rainbow;
+package rainbow;
 public class Rainbow {
 int color;
 
