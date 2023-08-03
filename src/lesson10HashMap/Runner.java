@@ -49,6 +49,27 @@ public class Runner {
         Person person = people.getOrDefault("Jon", new Person("default",0));
         System.out.println(person.getName());
 
+        System.out.println("HashSet:");
+        Set<Integer> numbers = new HashSet<>();
+        numbers.add(3);
+        numbers.add(2);
+        numbers.add(5);
+        numbers.add(1);
+        numbers.add(20);
+
+        numbers.forEach(System.out::println);
+        System.out.println("TreeSet:");
+        Set<Integer> numbers1 = new TreeSet<>(); //отсортированное множество
+        numbers1.add(20);
+        numbers1.add(2);
+        numbers1.add(3);
+        numbers1.add(1);
+        numbers1.add(20);
+        numbers1.forEach(System.out::println);
+
+        List<String> lists = new ArrayList<>();
+        Set<String> setNumbers = new HashSet<>(list);
+        setNumbers.forEach(System.out::println);
 
     }
 }
