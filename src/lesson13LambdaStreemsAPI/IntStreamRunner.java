@@ -20,8 +20,6 @@ public class IntStreamRunner {
 
         System.out.println(statistics);
 
-        // TODO: 04.08.2023
-
 
         IntStream.range(0, 10).forEach(System.out::println);
 
@@ -43,7 +41,6 @@ public class IntStreamRunner {
                 .limit(20)
                 .forEach(System.out::println);
 
-        // TODO: 04.08.2023 Unit testing
 
     }
 }
