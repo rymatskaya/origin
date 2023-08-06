@@ -2,6 +2,7 @@ package lesson13LambdaStreemsAPI;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -57,6 +58,7 @@ public class Main {
                 .distinct() //убрает дубликаты
                 .limit(5) //только 5 элементов попадет в выборку
                 .sorted() //работает, если реализует Comparable интерфейс
+                .peek(System.out::println)
                 .toList();
 
         nn.forEach(System.out::println);
@@ -80,18 +82,63 @@ public class Main {
             }
             ;
 
+            Student vasya = new Student("Vasya", 45);
             List<Student> students = List.of(
                     new Student("Ivan", 23),
                     new Student("Mark", 24),
                     new Student("kolya", 21),
-                    new Student("Vasya", 45)
+                    vasya
+                    
             );
 
 
-            // TODO: 01.08.2023  пример для flatMap
+
+            Stream<Student> students1 = Stream.of(
+                    new Student(),
+                    new Student(),
+                    new Student(),
+                    new Student()
+            );
+
+
+            students1.map(Student::getAge)
+                         .forEach(System.out::println);
+
+         //   students1.flatMap(it -> it.getMarks().stream())
+         //            .forEach(System.out::println);
 
             students.stream()
                     .parallel();
+
+            Integer age = students.stream()
+                    .map(Student::getAge)
+                    .reduce(Integer::max)
+                    .get();
+            System.out.println(age);
+
+            Optional<Student> student= students.stream()
+                    .filter(s -> s.getAge() > 100)
+                    .reduce((s1, s2) -> s1.getAge() > s2.getAge() ? s1 : s2);
+
+            if (student.isPresent()){
+                System.out.println(student.get());
+            }
+
+           Student student2= students.stream()
+                    .filter(s -> s.getAge() > 100)
+                    .reduce((s1, s2) -> s1.getAge() > s2.getAge() ? s1 : s2)
+                    .orElse(new Student("Test",45))
+                    // .orElseThrow(() -> new RuntimeException(" Студента старше 100 лет не найдено"))
+                   //.ifPresent(System.out::println) если существует
+                   ;
+
+            Optional.empty();
+            Optional<Student> vasya1 = Optional.ofNullable(null);
+            Optional<Student> vasya2 = Optional.of(vasya);
+            //Optional<Student> vasya3 = Optional.ofNullable(getStudentById(id));
+            //vasya3.isPresent();
+
+
 
         }
     }
