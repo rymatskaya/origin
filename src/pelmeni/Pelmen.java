@@ -21,5 +21,6 @@ public class Pelmen {
             System.out.print(j + " ");
         }
 
+
     }
 }
