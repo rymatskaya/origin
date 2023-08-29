@@ -1,6 +1,7 @@
 package port.main;
 
 import java.util.Random;
+import port.container.Сontainer;
 
 public class GenerateRandom {
 
@@ -22,4 +23,11 @@ public class GenerateRandom {
                 ? Constants.DENSITY_SMALL
                 : Constants.DENSITY_HIGH;
     }
+/*
+    public static Сontainer[] generateArrayContainers() {
+        Random random = new Random();
+        int countContainers = random.nextBoolean() ? 2 : 4;
+        return 0;
+       // return generateArrayContainers(countContainers);
+    }*/
 }
